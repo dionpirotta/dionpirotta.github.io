@@ -1990,17 +1990,113 @@ body.is-touch .main {
   background-repeat: repeat, no-repeat;
 }
 
-/* Client One */
-#c_one {
-  background: url("images/overlay.png"), url("../../images/main.jpg");
+/* NAB */
+#c_nab_1 {
+  background: url("images/overlay.png"), url("../../images/clients/nab_l.png");
   background-size: 256px 256px, cover;
   background-attachment: fixed, fixed;
   background-position: top left, center center;
 }
 
-/* Client Two */
-#c_two {
-  background: url("images/overlay.png"), url("../../images/main.jpg");
+/*  MVFC */
+#c_mvfc {
+  background: url("images/overlay.png"), url("../../images/clients/mvfc_r.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  Internal Rubix 1 */
+#c_rubix_1 {
+  background: url("images/overlay.png"), url("../../images/clients/rubix_l.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  United For Care */
+#c_ufc {
+  background: url("images/overlay.png"), url("../../images/clients/ufc_r.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  Ausmasa 1 */
+#c_ausmasa_1 {
+  background: url("images/overlay.png"), url("../../images/clients/ausmasa_l.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  Total Tools */
+#c_tt {
+  background: url("images/overlay.png"), url("../../images/clients/tt_r.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  The Nature Conservancy 1 */
+#c_tnc_1 {
+  background: url("images/overlay.png"), url("../../images/clients/tnc_l.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  Ausmasa 2 */
+#c_ausmasa_2 {
+  background: url("images/overlay.png"), url("../../images/clients/ausmasa_r.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  The Nature Conservancy 2 */
+#c_tnc_2 {
+  background: url("images/overlay.png"), url("../../images/clients/tnc_l.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  Dynasty Gaming & Media */
+#c_dynasty {
+  background: url("images/overlay.png"), url("../../images/clients/dynasty_r.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  National Australia Bank */
+#c_nab_2 {
+  background: url("images/overlay.png"), url("../../images/clients/nab_l.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  Patties Foods */
+#c_patties {
+  background: url("images/overlay.png"), url("../../images/clients/patties_r.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  Telstra */
+#c_telstra {
+  background: url("images/overlay.png"), url("../../images/clients/telstra_l.png");
+  background-size: 256px 256px, cover;
+  background-attachment: fixed, fixed;
+  background-position: top left, center center;
+}
+
+/*  RUBIX 2 */
+#c_rubix_2 {
+  background: url("images/overlay.png"), url("../../images/clients/rubix_r.png");
   background-size: 256px 256px, cover;
   background-attachment: fixed, fixed;
   background-position: top left, center center;
