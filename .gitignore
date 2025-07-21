@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Build output (CSS folder if you don't want to track compiled CSS)
+assets/css/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VS Code settings folder
+.vscode/
+
+# Environment variables (if any)
+.env
+
+# Optional: Ignore package-lock.json if you don't want to track it
+package-lock.json
