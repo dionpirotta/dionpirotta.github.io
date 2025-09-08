@@ -67,16 +67,41 @@
 				</a>
 			</p>
 
-			<!-- HUD Image with Footnote -->
-			<div class="gallery">
-				<a href="images/projects/custom_hud_1.jpg" class="image fit"><img src="images/projects/custom_hud_1.jpg"
-						title="Custom CSGO HUD Screenshot" alt="" /></a>
-				<p style="font-size:0.85rem; text-align:center;">
-					Screenshot of the custom CSGO HUD in-game layout.
-				</p>
-			</div>
+			<!-- HUD Image Carousel -->
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="gallery">
+							<a href="images/projects/custom_hud_1.jpg" class="image fit"><img src="images/projects/custom_hud_1.jpg" title="HUD Image in a Live Game" alt="" /></a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="gallery">
+							<a href="images/projects/custom_hud_2.png" class="image fit"><img src="images/projects/custom_hud_2.png" title="Mocked Up over Game" alt="" /></a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="gallery">
+							<a href="images/projects/custom_hud_3.png" class="image fit"><img src="images/projects/custom_hud_3.png" title="Photoshop Elements" alt="" /></a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="gallery">
+							<a href="images/projects/custom_hud_4.png" class="image fit"><img src="images/projects/custom_hud_4.png" title="Photoshop Elements all broken down" alt="" /></a>
+						</div>
+					</div>
+				</div>
 
-			<!-- YouTube Video with Footnote -->
+				<!-- Navigation & Pagination -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<p style="font-size:0.85rem; text-align:center;">
+				Screenshots of the custom CSGO HUD in-game layout.
+			</p>
+
+			<!-- YouTube Video -->
 			<div class="video-wrapper" style="margin:0;">
 				<iframe src="https://www.youtube.com/embed/b5XgFDULfN0?enablejsapi=1" title="Custom CSGO HUD Demo"
 					frameborder="0"
@@ -89,12 +114,12 @@
 			</p>
 
 			<p>
-				My custom HUD triggered a large ripple in the Custom HUD industry of Counter-Strike, and became a very
-				popular HUD downloaded and utilized a lot.
+				My custom HUD triggered a large ripple in the Custom HUD industry of Counter-Strike, and became very
+				popular among competitive players.
 			</p>
-			<p>This also sparked the creation of the new Lexogrine HUD Manager System, which I had a hand in its
-				original development. This is the main system used today for any custom HUD for Counter-Strike
-				broadcasts.
+			<p>
+				This also led to the creation of the Lexogrine HUD Manager System, which I contributed to in its
+				original development. It remains the primary system for custom HUDs in Counter-Strike broadcasts.
 			</p>
 		</div>
 
@@ -210,6 +235,31 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			loop: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+		});
+
+		// Auto-pause videos when changing slides
+		swiper.on('slideChange', function () {
+			document.querySelectorAll('#project_1 iframe').forEach(function (iframe) {
+				// Send postMessage to pause the YouTube video
+				iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+			});
+		});
+	</script>
 
 </body>
 
