@@ -338,3 +338,12 @@
 	background-position: top left, bottom center;
 	background-repeat: repeat, no-repeat;
 }
+
+/* Project 4 */
+#project_4 {
+	background: url('images/overlay.png'), url('../../images/red.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
