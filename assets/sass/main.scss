@@ -14,218 +14,252 @@
 
 // Breakpoints.
 
-	@include breakpoints((
-		xxlarge: ( 1681px,  1920px ),
-		xlarge:  ( 1281px,  1680px ),
-		large:   ( 1001px,  1280px ),
-		medium:  ( 737px,   1000px ),
-		small:   ( 481px,   736px  ),
-		xsmall:  ( null,    480px  )
-	));
+@include breakpoints((xxlarge: (1681px, 1920px),
+		xlarge: (1281px, 1680px),
+		large: (1001px, 1280px),
+		medium: (737px, 1000px),
+		small: (481px, 736px),
+		xsmall: (null, 480px)));
 
 // Base.
 
-	@import 'base/reset';
-	@import 'base/page';
-	@import 'base/typography';
+@import 'base/reset';
+@import 'base/page';
+@import 'base/typography';
 
 // Component.
 
-	@import 'components/box';
-	@import 'components/button';
-	@import 'components/form';
-	@import 'components/icon';
-	@import 'components/image';
-	@import 'components/list';
-	@import 'components/actions';
-	@import 'components/icons';
-	@import 'components/section';
-	@import 'components/table';
-	@import 'components/poptrox-popup';
-	@import 'components/gallery';
+@import 'components/box';
+@import 'components/button';
+@import 'components/form';
+@import 'components/icon';
+@import 'components/image';
+@import 'components/list';
+@import 'components/actions';
+@import 'components/icons';
+@import 'components/section';
+@import 'components/table';
+@import 'components/poptrox-popup';
+@import 'components/gallery';
+@import 'components/video-carousel';
 
 // Layout.
 
-	@import 'layout/header';
-	@import 'layout/main';
-	@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
 
 /* Intro */
 
-	#intro {
-		background: url('images/overlay.png'), url('../../images/intro.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
-	}
+#intro {
+	background: url('images/overlay.png'), url('../../images/intro.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
 
 /* One */
 
-	#one {
-		background: url('images/overlay.png'), url('../../images/one.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#one {
+	background: url('images/overlay.png'), url('../../images/one.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /* Two */
 
-	#two {
-		background: url('images/overlay.png'), url('../../images/two.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#two {
+	background: url('images/overlay.png'), url('../../images/two.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /* Contact */
 
-	#contact {
-		overflow: hidden;
-		padding-bottom: 0;
+#contact {
+	overflow: hidden;
+	padding-bottom: 0;
 
+	.box {
+		@include vendor('transition', 'transform #{_duration(fade-in)} ease');
+		@include vendor('transform', 'translateY(0)');
+		position: relative;
+	}
+
+	&.inactive {
 		.box {
-			@include vendor('transition', 'transform #{_duration(fade-in)} ease');
-			@include vendor('transform', 'translateY(0)');
-			position: relative;
-		}
-
-		&.inactive {
-			.box {
-				@include vendor('transform', 'translateY(100%)');
-			}
-		}
-
-		@include breakpoint('<=small') {
-			.box {
-				padding: 1.5em 1.5em 2em 1.5em;
-			}
-		}
-
-		@include breakpoint('<=xsmall') {
-			.box {
-				padding: 1em 1em 2em 1em;
-			}
+			@include vendor('transform', 'translateY(100%)');
 		}
 	}
+
+	@include breakpoint('<=small') {
+		.box {
+			padding: 1.5em 1.5em 2em 1.5em;
+		}
+	}
+
+	@include breakpoint('<=xsmall') {
+		.box {
+			padding: 1em 1em 2em 1em;
+		}
+	}
+}
 
 /* Client Intro */
-	#client {
-		background: url('images/overlay.png'), url('../../images/main.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
-	}
+#client {
+	background: url('images/overlay.png'), url('../../images/main.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
+
+/* GO FARM */
+#c_gofarm_1 {
+	background: url('images/overlay.png'), url('../../images/clients/gofarm_r.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /* NAB */
-	#c_nab_1 {
-		background: url('images/overlay.png'), url('../../images/clients/nab_l.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_nab_1 {
+	background: url('images/overlay.png'), url('../../images/clients/nab_l.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  MVFC */
-	#c_mvfc {
-		background: url('images/overlay.png'), url('../../images/clients/mvfc_r.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_mvfc {
+	background: url('images/overlay.png'), url('../../images/clients/mvfc_r.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  Internal Rubix 1 */
-	#c_rubix_1 {
-		background: url('images/overlay.png'), url('../../images/clients/rubix_l.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_rubix_1 {
+	background: url('images/overlay.png'), url('../../images/clients/rubix_l.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  United For Care */
-	#c_ufc {
-		background: url('images/overlay.png'), url('../../images/clients/ufc_r.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_ufc {
+	background: url('images/overlay.png'), url('../../images/clients/ufc_r.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  Ausmasa 1 */
-	#c_ausmasa_1 {
-		background: url('images/overlay.png'), url('../../images/clients/ausmasa_l.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_ausmasa_1 {
+	background: url('images/overlay.png'), url('../../images/clients/ausmasa_l.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  Total Tools */
-	#c_tt {
-		background: url('images/overlay.png'), url('../../images/clients/tt_r.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_tt {
+	background: url('images/overlay.png'), url('../../images/clients/tt_r.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  The Nature Conservancy 1 */
-	#c_tnc_1 {
-		background: url('images/overlay.png'), url('../../images/clients/tnc_l.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_tnc_1 {
+	background: url('images/overlay.png'), url('../../images/clients/tnc_l.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  Ausmasa 2 */
-	#c_ausmasa_2 {
-		background: url('images/overlay.png'), url('../../images/clients/ausmasa_r.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_ausmasa_2 {
+	background: url('images/overlay.png'), url('../../images/clients/ausmasa_r.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  The Nature Conservancy 2 */
-	#c_tnc_2 {
-		background: url('images/overlay.png'), url('../../images/clients/tnc_l.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_tnc_2 {
+	background: url('images/overlay.png'), url('../../images/clients/tnc_l.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  Dynasty Gaming & Media */
-	#c_dynasty {
-		background: url('images/overlay.png'), url('../../images/clients/dynasty_r.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
-	
+#c_dynasty {
+	background: url('images/overlay.png'), url('../../images/clients/dynasty_r.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
+
 /*  National Australia Bank */
-	#c_nab_2 {
-		background: url('images/overlay.png'), url('../../images/clients/nab_l.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_nab_2 {
+	background: url('images/overlay.png'), url('../../images/clients/nab_l.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  Patties Foods */
-	#c_patties {
-		background: url('images/overlay.png'), url('../../images/clients/patties_r.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_patties {
+	background: url('images/overlay.png'), url('../../images/clients/patties_r.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  Telstra */
-	#c_telstra {
-		background: url('images/overlay.png'), url('../../images/clients/telstra_l.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_telstra {
+	background: url('images/overlay.png'), url('../../images/clients/telstra_l.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /*  RUBIX 2 */
-	#c_rubix_2 {
-		background: url('images/overlay.png'), url('../../images/clients/rubix_r.png');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#c_rubix_2 {
+	background: url('images/overlay.png'), url('../../images/clients/rubix_r.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
+
+/* Esports */
+#esports-main {
+	background: url('images/overlay.png'), url('../../images/blue.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
+
+/* Esports Links */
+#esports-links {
+	background: url('images/overlay.png'), url('../../images/three.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
+
+/* Esports Videos */
+#esports-videos {
+	background: url('images/overlay.png'), url('../../images/pink.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
