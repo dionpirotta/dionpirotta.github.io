@@ -50,7 +50,6 @@
 @import 'layout/footer';
 
 /* Intro */
-
 #intro {
 	background: url('images/overlay.png'), url('../../images/intro.jpg');
 	background-size: 256px 256px, cover;
@@ -60,7 +59,6 @@
 }
 
 /* One */
-
 #one {
 	background: url('images/overlay.png'), url('../../images/one.jpg');
 	background-size: 256px 256px, cover;
@@ -69,7 +67,6 @@
 }
 
 /* Two */
-
 #two {
 	background: url('images/overlay.png'), url('../../images/two.jpg');
 	background-size: 256px 256px, cover;
@@ -77,8 +74,15 @@
 	background-position: top left, center center;
 }
 
-/* Contact */
+#work {
+	background: url('images/overlay.png'), url('../../images/cloud_1.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
 
+/* Contact */
 #contact {
 	overflow: hidden;
 	padding-bottom: 0;
@@ -238,7 +242,16 @@
 }
 
 /* Esports */
-#esports-main {
+#esports {
+	background: url('images/overlay.png'), url('../../images/cloud_2.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
+
+/* Esports */
+#esport {
 	background: url('images/overlay.png'), url('../../images/blue.jpg');
 	background-size: 256px 256px, cover;
 	background-attachment: fixed, fixed;
@@ -258,6 +271,68 @@
 /* Esports Videos */
 #esports-videos {
 	background: url('images/overlay.png'), url('../../images/pink.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
+
+/* Projects */
+#projects {
+	background: url('images/overlay.png'), url('../../images/cloud_3.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
+
+/* Projects */
+#project {
+	background: url('images/overlay.png'), url('../../images/purple.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
+
+/* Project 1 */
+#project_1 {
+	background: url('images/overlay.png'), url('../../images/yellow.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+
+	.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin: 2rem 0;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}
+
+/* Project 2 */
+#project_2 {
+	background: url('images/overlay.png'), url('../../images/orange.jpg');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
+
+/* Project 3 */
+#project_3 {
+	background: url('images/overlay.png'), url('../../images/green.jpg');
 	background-size: 256px 256px, cover;
 	background-attachment: fixed, fixed;
 	background-position: top left, bottom center;
