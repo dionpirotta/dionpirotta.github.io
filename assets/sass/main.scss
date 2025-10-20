@@ -121,6 +121,14 @@
 	background-repeat: repeat, no-repeat;
 }
 
+/* NPS */
+#c_nps_1 {
+	background: url('images/overlay.png'), url('../../images/clients/nps_l.png');
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
+
 /* GO FARM */
 #c_gofarm_1 {
 	background: url('images/overlay.png'), url('../../images/clients/gofarm_r.png');
